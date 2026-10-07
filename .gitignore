@@ -1,0 +1,5 @@
+node_modules/
+.DS_Store
+.mintlify/
+downloads/*.msi
+downloads/*.dmg

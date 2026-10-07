@@ -1,0 +1,43 @@
+---
+title: "快速开始"
+description: "从注册到第一次成功调用，按这 5 步走"
+---
+
+第一次用 AgentPM API，照这条线走一遍就能跑通。每一步都不复杂，关键是第 3 步选对分组，这是新手最容易卡住的地方。
+
+<Steps>
+  <Step title="注册账号">
+    前往 [ai.axuremart.com](https://ai.axuremart.com) 注册并登录。
+  </Step>
+  <Step title="充值额度">
+    进入控制台充值额度。按实际 token 用量扣费，先充一点试用即可。
+  </Step>
+  <Step title="想好用哪个模型，对应哪个分组（关键）">
+    分组直接决定你能调用哪些模型。选错分组创建的令牌，调用时会报「没有可用渠道」，所以先确认再建令牌。
+
+    | 想用的模型 | 令牌分组 | 适合 |
+    | --- | --- | --- |
+    | Claude opus 5.5 / sonnet 5.5 | `claude-max` | 支持 1M 上下文，效果好，强力推荐 |
+    | Claude sonnet 4.5 | `claude-aws` | 特价，性价比高，上下文较短 |
+    | GPT（Codex） | `codex` | 用 Codex / ChatGPT 桌面端编码 |
+
+  </Step>
+  <Step title="创建 API Key（令牌）">
+    1. 控制台进入 **令牌** 页，点 **添加令牌**
+    2. 填令牌名称
+    3. **选分组**（就是上一步想好的那个）
+    4. 点 **创建**，复制 API Key
+  </Step>
+  <Step title="配置工具，开始使用">
+    按你用的工具选一篇教程，把 API Key 填进去：
+
+    - Claude Code：[安装与更新](/claude/install) → [模型配置](/claude/config) → [Claude 使用](/claude/usage)
+    - Codex：[安装](/gpt/install) → [模型配置](/gpt/config) → [Codex 使用](/gpt/usage)
+    - IDE：[Trae](/ide/trae)、[Cursor](/ide/cursor)
+
+    请求地址统一填 `https://ai.axuremart.com`（Codex 填 `https://ai.axuremart.com/v1`）。
+
+  </Step>
+</Steps>
+
+遇到问题先看[常见问题](/faq)。

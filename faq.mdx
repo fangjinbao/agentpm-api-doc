@@ -1,0 +1,36 @@
+---
+title: "常见问题"
+description: "配置和使用过程中的常见问题"
+---
+
+<AccordionGroup>
+  <Accordion title="调用时报「没有可用渠道」">
+    令牌的分组和模型不匹配。Claude opus 5.5 / sonnet 5.5 用 `max` 分组，Claude sonnet 4.5 用 `aws` 分组，GPT（Codex）用 `codex` 分组。到控制台检查令牌分组，选错了就重新建一个令牌。
+  </Accordion>
+  <Accordion title="请求地址填哪个？">
+    Claude 和 IDE 填 `https://ai.axuremart.com`，Codex 填 `https://ai.axuremart.com/v1`。
+  </Accordion>
+  <Accordion title="怎么切换到 Claude sonnet 5.5，或开启 1M 上下文？">
+    启动 Claude 后默认是 Claude opus 5.5。在输入框中输入 `/model` 切换模型。详见[模型配置](/claude/config)。
+  </Accordion>
+  <Accordion title="Claude sonnet 4.5 调用不了">
+    这个模型需要在 cc switch 里填写主模型 `claude-sonnet-4-5-20250929`，并且令牌勾选 `aws` 分组。详见[模型配置](/claude/config)。
+  </Accordion>
+  <Accordion title="Codex 配置好了还是无法调用模型">
+    检查 `config.toml` 中 `[model_providers.custom]` 的配置是否正确。文件路径：`~/.codex/config.toml`（Windows 为 `C:\Users\你的用户名\.codex\config.toml`）。详见 [GPT 模型配置](/gpt/config)。
+  </Accordion>
+  <Accordion title="Mac 安装 Claude 时提示 errno: -13">
+    权限不足，在命令前加 `sudo`：
+
+    ```bash
+    sudo npm install -g @anthropic-ai/claude-code
+    ```
+  </Accordion>
+  <Accordion title="电脑意外关机后，怎么恢复上次的对话？">
+    用下面的命令启动，可以恢复上一次的对话记录和上下文：
+
+    ```bash
+    claude --continue --dangerously-skip-permissions
+    ```
+  </Accordion>
+</AccordionGroup>

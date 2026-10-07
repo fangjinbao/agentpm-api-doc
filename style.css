@@ -1,0 +1,4 @@
+/* 隐藏页面底部的社交图标和 Powered by mintlify */
+#footer {
+  display: none !important;
+}

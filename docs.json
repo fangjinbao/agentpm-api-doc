@@ -1,0 +1,56 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "AgentPM API使用文档",
+  "colors": {
+    "primary": "#2563EB",
+    "light": "#60A5FA",
+    "dark": "#1D4ED8"
+  },
+  "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "开始",
+        "pages": [
+          "index",
+          "faq"
+        ]
+      },
+      {
+        "group": "Claude 模型使用",
+        "pages": [
+          "claude/install",
+          "claude/config",
+          "claude/usage"
+        ]
+      },
+      {
+        "group": "GPT 模型使用",
+        "pages": [
+          "gpt/install",
+          "gpt/config",
+          "gpt/usage"
+        ]
+      },
+      {
+        "group": "常见 IDE 工具模型配置",
+        "pages": [
+          "ide/trae",
+          "ide/cursor"
+        ]
+      }
+    ]
+  },
+  "navbar": {
+    "primary": {
+      "type": "button",
+      "label": "控制台",
+      "href": "https://ai.axuremart.com"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "agentpm-api-doc",
+  "private": true,
+  "scripts": {
+    "dev": "mint dev",
+    "broken-links": "mint broken-links"
+  },
+  "devDependencies": {
+    "mint": "4.2.988"
+  }
+}
